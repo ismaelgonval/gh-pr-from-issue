@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+
+help() {
+    echo "Usage: gh pr-from-issue [ISSUE_NUMBER]"
+}
+
+if [ "$#" -ne 1 ]; then
+    echo -e "Invalid number of arguments.\n"
+    help
+    exit 1
+fi
+
+ISSUE_NUMBER="$1"
+
+out=$(gh issue view "${ISSUE_NUMBER}" --json title,labels)
+title=$(echo "${out}" | jq -r .title)
+labels=$(echo "${out}" | jq -r '[.labels[].name] | join(",")')
+body="Closes #${ISSUE_NUMBER}"
+
+gh pr create -t "${title}" -b "${body}" -l "${labels}"
