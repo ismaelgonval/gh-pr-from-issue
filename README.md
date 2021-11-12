@@ -1,4 +1,4 @@
-# `gh pr-from-issue`
+# GitHub CLI extension - **pr-from-issue**
 
 ## Summary
 
