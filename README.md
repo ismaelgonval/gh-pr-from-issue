@@ -2,7 +2,8 @@
 
 ## Summary
 
-Extension for [GitHub CLI](https://github.com/cli/cli) that generates **pull requests from issues**.
+Extension for [GitHub CLI](https://github.com/cli/cli) that generates **pull
+requests from issues** copying several attributes and linking them.
 
 ## Requirements
 
