@@ -18,4 +18,4 @@ title=$(echo "${out}" | jq -r .title)
 labels=$(echo "${out}" | jq -r '[.labels[].name] | join(",")')
 body="Closes #${ISSUE_NUMBER}"
 
-gh pr create -t "${title}" -b "${body}" -l "${labels}"
+gh pr create -t "${title}" -b "${body}" -l "${labels}" --draft
