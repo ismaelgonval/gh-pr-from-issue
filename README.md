@@ -26,6 +26,6 @@ After installing this extension in the GitHub CLI client, you can get create a P
 gh pr-from-issue [ISSUE_NUMBER]
 ```
 
-This will open a new pull request in draft mode with the same title and labels.
+This will open a new pull request from the **current branch** in draft mode with the same title and labels.
 It also adds a `Closes #[ISSUE_NUMBER]` directive in the description, this links
 the PR with the issue and closes it when merged.
